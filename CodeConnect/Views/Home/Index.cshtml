@@ -2,7 +2,71 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+<!--<div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>User Id : @ViewData["UserID"]</p>
+</div>-->
+
+<div id="main-container">
+    <div id="left-bar" class="bg-gray-400 border-right bar">
+        <svg id="copy-icon" class="icon" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 16.5L19.5 4.5L18.75 3.75H9L8.25 4.5L8.25 7.5L5.25 7.5L4.5 8.25V20.25L5.25 21H15L15.75 20.25V17.25H18.75L19.5 16.5ZM15.75 15.75L15.75 8.25L15 7.5L9.75 7.5V5.25L18 5.25V15.75H15.75ZM6 9L14.25 9L14.25 19.5L6 19.5L6 9Z" fill="#ffffff"></path> </g></svg>
+    </div>
+    <div id="file-and-code-container">
+        <div id="file-tabs"></div>
+        <div id="code-area"></div>
+    </div>
+    <div id="right-bar" class="bg-gray-400 border-left bar">
+        <div id="info-display"></div>
+        <input id="chat-input" type="text" placeholder="Type to chat">
+    </div>
 </div>
+
+<style>
+
+    .bar {
+        background-color: #12171F;
+    }
+
+    #top-bar {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #main-container {
+        display: flex;
+        flex: 1;
+    }
+
+    #left-bar {
+        border-right: 1px solid white;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #file-and-code-container {
+        display: inline-block;
+        width: 100%;
+        background-color: black;
+    }
+
+    #right-bar {
+        display: inline-block;
+        border-right: 1px solid white;
+        width: fit-content;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #chat-input {
+        margin: 20px 15px;
+    }
+
+    .icon {
+        width: 30px;
+        margin: 15px;
+    }
+
+</style>
