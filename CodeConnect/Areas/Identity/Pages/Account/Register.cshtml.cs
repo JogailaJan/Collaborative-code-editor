@@ -72,7 +72,7 @@ namespace CodeConnect.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [DataType(DataType.Text)]
+            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [Display(Name="User Name")]
             public string ChosenUserName { get; set; }
             /// <summary>

@@ -3,7 +3,9 @@ using CodeConnect.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace CodeConnect.Controllers
 {
@@ -28,6 +30,13 @@ namespace CodeConnect.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        public IActionResult CodeSpace(string room)
+        {
+            ViewData["UserID"] = _userManager.GetUserId(this.User);
+            ViewData["Room"] = room;
+            return View("CodeSpace");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

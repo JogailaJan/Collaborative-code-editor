@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using CodeConnect.Areas.Identity.Data
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+
+@{
+    //var userName = UserManager.GetUserName(User);
+    string chosenUserName = "";
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var userName = UserManager.GetUserName(User);
+        if (userName != null)
+        {
+            var user = await UserManager.FindByNameAsync(userName);
+            if (user != null)
+            {
+                chosenUserName = user.ChosenUserName;
+            }
+        }
+    }
+}
+
+<div class="d-flex flex-row mx-4 my-3">
+    <input class="h-100 me-3" type="text" id="messageInput" placeholder="Type to chat" />
+    <input class="h-100" type="button" id="sendButton" value=">" />
+</div>
+<div id="messagesList" class="text-light"></div>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
+
+<script>
+
+    document.getElementById("sendButton").addEventListener("click", async function (event) {
+        var message = document.getElementById("messageInput").value;
+        var room = "@ViewData["Room"]";
+        var userName = '@Html.Raw(Json.Serialize(chosenUserName))'.slice(1, -1); // Inject username into JavaScript variable
+        console.log(userName);
+        console.log(message);
+        console.log(room);
+        if (userName && message && room) {
+            connection.invoke("SendMessageToGroup", userName, message, room, false).catch(function (err) {
+                return console.error(err.toString());
+            });
+        }
+        event.preventDefault();
+    });
+</script>

@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\js\\chat.js",
+      "PackagePath": "staticwebassets\\js\\chat.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
+      "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js",
+      "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.min.js"
+    },
+    {
       "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -243,6 +255,14 @@
     {
       "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js",
+      "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js",
+      "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CodeConnect.Microsoft.AspNetCore.StaticWebAssets.props",

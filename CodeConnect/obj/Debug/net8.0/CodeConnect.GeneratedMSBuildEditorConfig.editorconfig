@@ -58,6 +58,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Jogaila/Git-repositories/JogailaJan/Collaborative-code-editor/CodeConnect/Views/Home/Chat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGF0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jogaila/Git-repositories/JogailaJan/Collaborative-code-editor/CodeConnect/Views/Home/CodeSpace.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb2RlU3BhY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Jogaila/Git-repositories/JogailaJan/Collaborative-code-editor/CodeConnect/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
