@@ -3,7 +3,7 @@
 }
 @using Microsoft.AspNetCore.Identity
 @using CodeConnect.Areas.Identity.Data
-
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 
 <div id="main-container" class="d-flex flex-row h-100">
     <div id="left-bar" class="d-flex flex-row" style="min-width: 60px;">
@@ -30,7 +30,7 @@
         <div id="file-tabs"></div>
         <div id="code-area"></div>
     </div>
-    <div id="chat-bar" class="bg-dark border-start bar flex-column-reverse d-flex">
+    <div id="chat-bar" class="bg-dark border-start bar flex-column d-flex">
         <partial name="Chat.cshtml" />
     </div>
 </div>

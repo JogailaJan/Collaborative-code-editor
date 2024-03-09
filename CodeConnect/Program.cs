@@ -1,23 +1,34 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using CodeConnect.Data;
+using CodeConnect.Database;
 using CodeConnect.Areas.Identity.Data;
 using CodeConnect.Hubs;
+using CodeConnect.Infrastructure.Repository;
+using CodeConnect.Infrastructure.Respository;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("AuthDbContextConnection") ?? throw new InvalidOperationException("Connection string 'AuthDbContextConnection' not found.");
 
-builder.Services.AddDbContext<AuthDbContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 
-builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<AuthDbContext>();
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<AppDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddRazorPages();
 
+builder.Services.AddTransient<IChatRepository, ChatRepository>();
+
 //For messaging
 builder.Services.AddSignalR();
+
+builder.Services.AddLogging(config =>
+{
+    config.AddDebug();
+    config.AddConsole();
+    // Additional configuration for logging
+});
 
 var app = builder.Build();
 
@@ -34,6 +45,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

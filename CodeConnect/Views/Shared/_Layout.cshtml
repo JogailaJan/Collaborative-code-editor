@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] - CodeConnect</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/CodeConnect.styles.css" asp-append-version="true" />
+    <!--<link rel="stylesheet" href="~/CodeConnect.styles.css" asp-append-version="true" />-->
 </head>
 <body class="d-flex flex-column m-0" style="height: 100vh;">
     <header>
@@ -27,9 +27,30 @@
         </nav>
     </header>
     <div class="d-flex flex-grow-1 m-0 p-0">
-        <main role="main" class="flex-fill">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <vc:room></vc:room>
+
+        }
+        <div class="chat">
             @RenderBody()
-        </main>
+        </div>
+    </div>
+
+    <div class="modal" id="create-project-modal">
+        <form asp-controller="Home" asp-action="CreateProject" class="modal-body">
+            <button type="button" class="close" onclick="closeModal()">X</button>
+            <header>Create Project</header>
+            <div>
+                <input name="name">
+            </div>
+            <div>
+                <input name="password">
+            </div>
+            <footer>
+                <button>Create</button>
+            </footer>
+        </form>
     </div>
 
 

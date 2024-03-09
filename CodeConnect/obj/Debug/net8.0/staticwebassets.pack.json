@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\js\\chat.js"
     },
     {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\js\\messageBuilder.js",
+      "PackagePath": "staticwebassets\\js\\messageBuilder.js"
+    },
+    {
       "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
       "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.js"
     },

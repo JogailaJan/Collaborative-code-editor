@@ -1,48 +1,68 @@
-﻿@using Microsoft.AspNetCore.Identity
-@using CodeConnect.Areas.Identity.Data
-@inject UserManager<ApplicationUser> UserManager
-@inject SignInManager<ApplicationUser> SignInManager
+﻿@model Project
 
-@{
-    //var userName = UserManager.GetUserName(User);
-    string chosenUserName = "";
-    @if (SignInManager.IsSignedIn(User))
+<div class="chat-body">
+    @foreach (var message in Model.Messages)
     {
-        var userName = UserManager.GetUserName(User);
-        if (userName != null)
-        {
-            var user = await UserManager.FindByNameAsync(userName);
-            if (user != null)
-            {
-                chosenUserName = user.ChosenUserName;
-            }
-        }
+        <div class="message">
+            <header class="text-light">@message.Name:</header>
+            <p class="text-light">@message.Text</p>
+            <footer class="text-light">@message.Timestamp</footer>
+        </div>
     }
-}
-
-<div class="d-flex flex-row mx-4 my-3">
-    <input class="h-100 me-3" type="text" id="messageInput" placeholder="Type to chat" />
-    <input class="h-100" type="button" id="sendButton" value=">" />
 </div>
-<div id="messagesList" class="text-light"></div>
+<form class="chat-input" onsubmit="sendMessage(event)" asp-controller="Home" asp-action="SendMessage">
+    <input type="hidden" name="roomId" value="@Model.Id">
+    <input type="text" name="message" id="message-input">
+    <button type="submit">Send</button>
+</form>
 
-<script src="~/js/signalr/dist/browser/signalr.js"></script>
-<script src="~/js/chat.js"></script>
+@section scripts {
+    <script src="~/js/signalr.min.js"></script>
+    <script src="~/js/messageBuilder.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        var connection = new signalR.HubConnectionBuilder()
+            .withUrl("/chatHub")
+            .build();
 
-<script>
+        var _connectionId = '';
 
-    document.getElementById("sendButton").addEventListener("click", async function (event) {
-        var message = document.getElementById("messageInput").value;
-        var room = "@ViewData["Room"]";
-        var userName = '@Html.Raw(Json.Serialize(chosenUserName))'.slice(1, -1); // Inject username into JavaScript variable
-        console.log(userName);
-        console.log(message);
-        console.log(room);
-        if (userName && message && room) {
-            connection.invoke("SendMessageToGroup", userName, message, room, false).catch(function (err) {
-                return console.error(err.toString());
-            });
+        connection.on("ReceiveMessage", function (data) {
+            var message = messageBuilder()
+                .createMessage()
+                .withHeader(data.name)
+                .withParagraph(data.text)
+                .withFooter(data.timestamp)
+                .build();
+
+            document.querySelector('.chat-body').append(message);
+        })
+
+        connection.start()
+            .then(function () {
+                connection.invoke('joinRoom', '@Model.Id');
+            })
+            .catch(function (err) {
+                console.log(err)
+            })
+
+        window.addEventListener('onunload', function () {
+            connection.invoke('leaveRoom', '@Model.Id');
+        })
+
+        var sendMessage = function (event) {
+            event.preventDefault();
+
+            var data = new FormData(event.target);
+            document.getElementById('message-input').value = '';
+            axios.post('/Home/SendMessage', data)
+                .then(res => {
+                    console.log("Message Sent!")
+                })
+                .catch(err => {
+                    console.log("Failed to send message!")
+                })
         }
-        event.preventDefault();
-    });
-</script>
+
+    </script>
+}

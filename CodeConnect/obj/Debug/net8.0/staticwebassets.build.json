@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2DPrOIjMI/RD+7CgGN+MOiKtUFFRZgq+nZMvpTX3oA8=",
+  "Hash": "ssBCC1emkoKlv+PWkQnxGi/lOVFwzHK6yLpGcO4NUjw=",
   "Source": "CodeConnect",
   "BasePath": "_content/CodeConnect",
   "Mode": "Default",
@@ -1288,6 +1288,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chat.js"
+    },
+    {
+      "Identity": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\js\\messageBuilder.js",
+      "SourceId": "CodeConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\",
+      "BasePath": "_content/CodeConnect",
+      "RelativePath": "js/messageBuilder.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\messageBuilder.js"
     },
     {
       "Identity": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",

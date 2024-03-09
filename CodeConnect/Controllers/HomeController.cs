@@ -1,8 +1,13 @@
 using CodeConnect.Areas.Identity.Data;
+using CodeConnect.Database;
+using CodeConnect.Hubs;
+using CodeConnect.Infrastructure;
+using CodeConnect.Infrastructure.Repository;
 using CodeConnect.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -10,39 +15,70 @@ using System.Threading.Tasks;
 namespace CodeConnect.Controllers
 {
     [Authorize]
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
+        private IChatRepository _repo;
         private readonly ILogger<HomeController> _logger;
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public HomeController(ILogger<HomeController> logger, UserManager<ApplicationUser> userManager)
+        public HomeController(ILogger<HomeController> logger, UserManager<ApplicationUser> userManager, IChatRepository repo)
         {
             _logger = logger;
             this._userManager = userManager;
+            _repo = repo;
         }
 
         public IActionResult Index()
         {
-            ViewData["UserID"] = _userManager.GetUserId(this.User);
-            return View();
+            var projects = _repo.GetProjects(GetUserId());
+
+            return View(projects);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Find([FromServices] AppDbContext ctx)
         {
-            return View();
+            var users = ctx.Users
+                .Where(x => x.Id != User.GetUserId())
+                .ToList();
+
+            return View(users);
         }
 
-        public IActionResult CodeSpace(string room)
+        [HttpGet("{id}")]
+        public IActionResult Project(int id)
         {
-            ViewData["UserID"] = _userManager.GetUserId(this.User);
-            ViewData["Room"] = room;
-            return View("CodeSpace");
+            return View(_repo.GetProject(id));
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public async Task<IActionResult> CreateProject(string name, string password)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            await _repo.CreateProject(name, password, GetUserId());
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> JoinProject(int id)
+        {
+            await _repo.JoinProject(id, GetUserId());
+
+            return RedirectToAction("Project", "Home", new { id = id });
+        }
+
+        public async Task<IActionResult> SendMessage(
+            int roomId,
+            string message,
+            [FromServices] IHubContext<ChatHub> chat)
+        {
+            var Message = await _repo.CreateMessage(roomId, message, "User");
+            await chat.Clients.Group(roomId.ToString())
+                .SendAsync("ReceiveMessage", new
+                {
+                    Text = Message.Text,
+                    Name = Message.Name,
+                    Timestamp = Message.Timestamp.ToString("dd/MM/yyyy hh:mm:ss")
+                });
+            return RedirectToAction("Project", "Home", new { id = roomId });
         }
     }
 }

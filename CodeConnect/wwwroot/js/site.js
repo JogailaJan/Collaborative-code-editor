@@ -1,4 +1,10 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿var createProjectBtn = document.getElementById('create-project-btn')
+var createProjectModal = document.getElementById('create-project-modal')
 
-// Write your JavaScript code.
+createProjectBtn.addEventListener('click', function () {
+    createProjectModal.classList.add('active')
+})
+
+function closeModal() {
+    createProjectModal.classList.remove('active')
+}
