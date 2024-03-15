@@ -5,7 +5,7 @@
 @using CodeConnect.Areas.Identity.Data
 <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 
-<div id="main-container" class="d-flex flex-row h-100">
+<div id="main-container" class="flex-grow-1 d-flex flex-row h-100">
     <div id="left-bar" class="d-flex flex-row" style="min-width: 60px;">
         <div id="icon-column" class="bg-dark border-end border-right border-white d-flex flex-column h-100" style="width: 60px;">
             <svg id="copy-icon" class="icon" data-target="copy-content" style="width: 60px;" viewBox="0 0 24.00 24.00" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
@@ -26,11 +26,11 @@
             </div>
         </div>
     </div>
-    <div id="file-and-code-container" class="flex-fill bg-black">
+    <div id="file-and-code-container" class="flex-fill bg-black w-100">
         <div id="file-tabs"></div>
         <div id="code-area"></div>
     </div>
-    <div id="chat-bar" class="bg-dark border-start bar flex-column d-flex">
+    <div id="chat-bar" class="bg-dark border-start bar d-flex flex-column flex-grow-1 overflow-hidden" style="width: 400px;">
         <partial name="Chat.cshtml" />
     </div>
 </div>

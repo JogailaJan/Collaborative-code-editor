@@ -10,7 +10,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Diagnostics;
+using System.Security.Claims;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+
 
 namespace CodeConnect.Controllers
 {
@@ -24,24 +27,23 @@ namespace CodeConnect.Controllers
         public HomeController(ILogger<HomeController> logger, UserManager<ApplicationUser> userManager, IChatRepository repo)
         {
             _logger = logger;
-            this._userManager = userManager;
+            _userManager = userManager;
             _repo = repo;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {
             var projects = _repo.GetProjects(GetUserId());
+            if (User.Identity.IsAuthenticated)
+            {
+                var user = await _userManager.FindByNameAsync(User.Identity.Name);
+                if (user != null)
+                {
+                    HttpContext.Session.SetString("ChosenUserName", user.ChosenUserName);
 
+                }
+            }
             return View(projects);
-        }
-
-        public IActionResult Find([FromServices] AppDbContext ctx)
-        {
-            var users = ctx.Users
-                .Where(x => x.Id != User.GetUserId())
-                .ToList();
-
-            return View(users);
         }
 
         [HttpGet("{id}")]
@@ -57,20 +59,50 @@ namespace CodeConnect.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet]
-        public async Task<IActionResult> JoinProject(int id)
-        {
-            await _repo.JoinProject(id, GetUserId());
+        //[HttpGet]
+        //public async Task<IActionResult> JoinProject(int id)
+        //{
+          //  await _repo.JoinProject(id, GetUserId());
 
-            return RedirectToAction("Project", "Home", new { id = id });
+            //return RedirectToAction("Project", "Home", new { id = id });
+        //}
+        [HttpPost]
+        public async Task<IActionResult> JoinProject(string name, string password)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Get user ID from claims.
+            try
+            {
+                var project = await _repo.JoinProjectAsync(name, password, userId);
+                return RedirectToAction("Index");
+                //return Ok(new { message = "User added to project successfully." });
+            }
+            catch (Exception ex)
+            {
+                // Determine the type of exception to return the correct response.
+                if (ex.Message == "Project not found.")
+                {
+                    return NotFound(ex.Message);
+                }
+                else if (ex.Message == "Password is incorrect." || ex.Message == "User is already a member of the project.")
+                {
+                    return BadRequest(ex.Message);
+                }
+                else
+                {
+                    return StatusCode(500, "An error occurred while processing your request.");
+                }
+            }
         }
+
 
         public async Task<IActionResult> SendMessage(
             int roomId,
             string message,
+            string userName,
             [FromServices] IHubContext<ChatHub> chat)
         {
-            var Message = await _repo.CreateMessage(roomId, message, "User");
+            var Message = await _repo.CreateMessage(roomId, message, userName);
+
             await chat.Clients.Group(roomId.ToString())
                 .SendAsync("ReceiveMessage", new
                 {
@@ -78,7 +110,8 @@ namespace CodeConnect.Controllers
                     Name = Message.Name,
                     Timestamp = Message.Timestamp.ToString("dd/MM/yyyy hh:mm:ss")
                 });
-            return RedirectToAction("Project", "Home", new { id = roomId });
+            //return RedirectToAction("Project", "Home", new { id = roomId });
+            return Ok();
         }
     }
 }

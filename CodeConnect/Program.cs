@@ -13,12 +13,14 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(conn
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<AppDbContext>();
 
+builder.Services.AddSession();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddRazorPages();
 
 builder.Services.AddTransient<IChatRepository, ChatRepository>();
+
 
 //For messaging
 builder.Services.AddSignalR();
@@ -30,7 +32,22 @@ builder.Services.AddLogging(config =>
     // Additional configuration for logging
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder.WithOrigins("https://localhost:7259") // Adjust the URL to your client's URL
+                          .AllowAnyHeader()
+                          .AllowAnyMethod()
+                          .AllowCredentials());
+});
+
+
+
+
 var app = builder.Build();
+
+// And enable CORS in the pipeline
+app.UseCors("AllowSpecificOrigin");
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -42,7 +59,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseSession();
 app.UseRouting();
 
 app.UseAuthentication();

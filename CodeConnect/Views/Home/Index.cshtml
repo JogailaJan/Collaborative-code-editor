@@ -1,12 +1,90 @@
 ﻿@model IEnumerable<Project>
 
-<div class="chat-body">
-    
-    @foreach (var project in Model)
-    {
-        <p>Hello</p>
-        <a class="room-button" asp-controller="Home" asp-action="JoinRoom" asp-route-id="@project.Id">
-            @project.Name
-        </a>
-    }
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="bg-dark text-white d-flex flex-grow-1">
+        <div class="container mt-5 w-50">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h1>Projects</h1>
+                <div>
+                    <button class="btn btn-success mr-2 project-button" id="create-project-btn">Create +</button>
+                    <button class="btn btn-primary" id="join-project-btn">Join</button>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-dark table-striped table-borderless">
+                    <thead>
+                        <tr>
+                            <th class="w-50" scope="col">Name</th>
+                            <th scope="col">Owner</th>
+                            <th scope="col">Created</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Repeat this row for each project -->
+                        <vc:project></vc:project>
+                        <!-- End repeat -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+}
+<div class="modal" id="create-project-modal">
+    <form asp-controller="Home" asp-action="CreateProject" class="modal-body">
+        <button type="button" class="close" onclick="closeCreateModal()">X</button>
+        <header>Create Project</header>
+        <div>
+            <input name="name">
+        </div>
+        <div>
+            <input name="password">
+        </div>
+        <footer>
+            <button>Create</button>
+        </footer>
+    </form>
 </div>
+
+<div class="modal" id="join-project-modal">
+    <form asp-controller="Home" asp-action="JoinProject" class="modal-body">
+        <button type="button" class="close" onclick="closeJoinModal()">X</button>
+        <header>Join Project</header>
+        <div>
+            <input name="name">
+        </div>
+        <div>
+            <input name="password">
+        </div>
+        <footer>
+            <button>Join</button>
+        </footer>
+    </form>
+</div>
+
+
+<script>
+    var createProjectBtn = document.getElementById('create-project-btn')
+    var createProjectModal = document.getElementById('create-project-modal')
+
+    createProjectBtn.addEventListener('click', function () {
+        createProjectModal.classList.add('active')
+    })
+
+    function closeCreateModal() {
+        createProjectModal.classList.remove('active')
+    }
+
+    var joinProjectBtn = document.getElementById('join-project-btn')
+    var joinProjectModal = document.getElementById('join-project-modal')
+
+    joinProjectBtn.addEventListener('click', function () {
+        joinProjectModal.classList.add('active')
+    })
+
+    function closeJoinModal() {
+        joinProjectModal.classList.remove('active')
+    }
+</script>

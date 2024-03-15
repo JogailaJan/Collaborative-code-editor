@@ -9,8 +9,8 @@ namespace CodeConnect.Infrastructure.Repository
     {
         Project GetProject(int id);
         Task CreateProject(string name, string password, string userId);
-        Task JoinProject(int chatId, string userId);
+        Task<Project> JoinProjectAsync(string name, string password, string userId);
         IEnumerable<Project> GetProjects(string userId);
-        Task<Message> CreateMessage(int chatId, string message, string userId);
+        Task<Message> CreateMessage(int chatId, string message, string userName);
     }
 }

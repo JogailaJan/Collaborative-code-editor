@@ -15,13 +15,13 @@ namespace CodeConnect.Infrastructure.Respository
 
         public ChatRepository(AppDbContext ctx) => _ctx = ctx;
 
-        public async Task<Message> CreateMessage(int chatId, string message, string userId)
+        public async Task<Message> CreateMessage(int chatId, string message, string userName)
         {
             var Message = new Message
             {
                 ProjectId = chatId,
                 Text = message,
-                Name = userId,
+                Name = userName,
                 Timestamp = DateTime.Now
             };
 
@@ -68,18 +68,36 @@ namespace CodeConnect.Infrastructure.Respository
                 .ToList();
         }
 
-        public async Task JoinProject(int chatId, string userId)
+        public async Task<Project> JoinProjectAsync(string name, string password, string userId)
         {
-            var chatUser = new ChatUser
-            {
-                ProjectId = chatId,
-                UserId = userId,
-                Role = UserRole.Member
-            };
+            var project = await _ctx.Projects
+                .Include(p => p.Users)
+                .FirstOrDefaultAsync(p => p.Name == name);
 
-            _ctx.ChatUsers.Add(chatUser);
+            if (project == null)
+            {
+                throw new Exception("Project not found.");
+            }
+            if (project.Password != password) // This should be a secure password check in production code.
+            {
+                throw new Exception("Password is incorrect.");
+            }
+            if (project.Users.Any(u => u.UserId == userId))
+            {
+                throw new Exception("User is already a member of the project.");
+            }
+
+            project.Users.Add(new ChatUser
+            {
+                UserId = userId,
+                Role = UserRole.Member // Adjust role accordingly.
+            });
 
             await _ctx.SaveChangesAsync();
+
+            return project; // Return the project if successful.
         }
+
+
     }
 }

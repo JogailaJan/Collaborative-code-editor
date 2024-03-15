@@ -1,68 +1,67 @@
 ﻿@model Project
+@{
+    var chosenUserName = Context.Session.GetString("ChosenUserName");
+}
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/messageBuilder.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-<div class="chat-body">
+<script>
+    var connection = new signalR.HubConnectionBuilder()
+        .withUrl("/chatHub")
+        .build();
+
+    connection.on("ReceiveMessage", function (data) {
+        var messageElement = document.createElement("div");
+        messageElement.innerHTML = `<div class="message">
+                <header class="text-light">${data.name}:</header>
+                <p class="text-light">${data.text}</p>
+            </div>`;
+        document.querySelector('.chat-body').append(messageElement);
+
+        document.querySelector('.chat-body').append(message);
+    });
+    connection.start().then(function () {
+        console.log("Connected to SignalR hub.");
+        connection.invoke('joinRoom', '@Model.Id');
+    }).catch(function (err) {
+        console.log(err)
+    });
+
+    window.addEventListener('unload', function () {
+        console.log("Disconnected to SignalR hub.");
+        connection.invoke('LeaveRoom', '@Model.Id');
+    })
+
+    var sendMessage = function (event) {
+        event.preventDefault();
+
+        var data = new FormData(event.target);
+        console.log("@chosenUserName");
+        document.getElementById('message-input').value = '';
+        axios.post('/Home/SendMessage', data)
+            .then(res => {
+                console.log("Message Sent!")
+            })
+            .catch(err => {
+                console.log("Failed to send message!")
+            })
+    }
+
+</script>
+
+<div class="chat-body bg-dark border-start d-flex flex-column flex-grow-1 bg-light overflow-auto p-3">
     @foreach (var message in Model.Messages)
     {
         <div class="message">
             <header class="text-light">@message.Name:</header>
             <p class="text-light">@message.Text</p>
-            <footer class="text-light">@message.Timestamp</footer>
         </div>
     }
 </div>
-<form class="chat-input" onsubmit="sendMessage(event)" asp-controller="Home" asp-action="SendMessage">
+<form class="chat-input" onsubmit="sendMessage(event)" >
     <input type="hidden" name="roomId" value="@Model.Id">
+    <input type="hidden" name="userName" value="@chosenUserName">
     <input type="text" name="message" id="message-input">
     <button type="submit">Send</button>
 </form>
-
-@section scripts {
-    <script src="~/js/signalr.min.js"></script>
-    <script src="~/js/messageBuilder.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script>
-        var connection = new signalR.HubConnectionBuilder()
-            .withUrl("/chatHub")
-            .build();
-
-        var _connectionId = '';
-
-        connection.on("ReceiveMessage", function (data) {
-            var message = messageBuilder()
-                .createMessage()
-                .withHeader(data.name)
-                .withParagraph(data.text)
-                .withFooter(data.timestamp)
-                .build();
-
-            document.querySelector('.chat-body').append(message);
-        })
-
-        connection.start()
-            .then(function () {
-                connection.invoke('joinRoom', '@Model.Id');
-            })
-            .catch(function (err) {
-                console.log(err)
-            })
-
-        window.addEventListener('onunload', function () {
-            connection.invoke('leaveRoom', '@Model.Id');
-        })
-
-        var sendMessage = function (event) {
-            event.preventDefault();
-
-            var data = new FormData(event.target);
-            document.getElementById('message-input').value = '';
-            axios.post('/Home/SendMessage', data)
-                .then(res => {
-                    console.log("Message Sent!")
-                })
-                .catch(err => {
-                    console.log("Failed to send message!")
-                })
-        }
-
-    </script>
-}

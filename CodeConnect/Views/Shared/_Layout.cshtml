@@ -26,33 +26,9 @@
 
         </nav>
     </header>
-    <div class="d-flex flex-grow-1 m-0 p-0">
-        @if (User.Identity.IsAuthenticated)
-        {
-            <vc:room></vc:room>
-
-        }
-        <div class="chat">
-            @RenderBody()
-        </div>
+    <div id="main" class="d-flex flex-grow-1 m-0 p-0">
+        @RenderBody()
     </div>
-
-    <div class="modal" id="create-project-modal">
-        <form asp-controller="Home" asp-action="CreateProject" class="modal-body">
-            <button type="button" class="close" onclick="closeModal()">X</button>
-            <header>Create Project</header>
-            <div>
-                <input name="name">
-            </div>
-            <div>
-                <input name="password">
-            </div>
-            <footer>
-                <button>Create</button>
-            </footer>
-        </form>
-    </div>
-
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
