@@ -62,6 +62,9 @@ app.UseStaticFiles();
 app.UseSession();
 app.UseRouting();
 
+app.UseStaticFiles(); // This line should be in the Configure method.
+
+
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -72,5 +75,6 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.MapHub<ChatHub>("/chatHub");
+app.MapHub<CodeHub>("/codeHub");
 
 app.Run();

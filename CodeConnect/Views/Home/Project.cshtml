@@ -3,9 +3,11 @@
 }
 @using Microsoft.AspNetCore.Identity
 @using CodeConnect.Areas.Identity.Data
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+
 <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 
-<div id="main-container" class="flex-grow-1 d-flex flex-row h-100">
+<div id="main-container" class="flex-grow-1 d-flex flex-row">
     <div id="left-bar" class="d-flex flex-row" style="min-width: 60px;">
         <div id="icon-column" class="bg-dark border-end border-right border-white d-flex flex-column h-100" style="width: 60px;">
             <svg id="copy-icon" class="icon" data-target="copy-content" style="width: 60px;" viewBox="0 0 24.00 24.00" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
@@ -26,21 +28,17 @@
             </div>
         </div>
     </div>
-    <div id="file-and-code-container" class="flex-fill bg-black w-100">
+    <div id="file-and-code-container" class="flex-fill bg-black w-auto">
         <div id="file-tabs"></div>
-        <div id="code-area"></div>
+        <partial name="_CodeEditorPartial.cshtml" />
     </div>
-    <div id="chat-bar" class="bg-dark border-start bar d-flex flex-column flex-grow-1 overflow-hidden" style="width: 400px;">
+    <div id="chat-bar" class="bg-dark border-start bar d-flex flex-column flex-grow-1 overflow-hidden" style="max-width: 300px; min-width: 300px;">
         <partial name="Chat.cshtml" />
     </div>
 </div>
 
 
 <script>
-
-    var room = '@ViewData["Room"]';
-    console.log("Room:", room);
-
     const icons = document.querySelectorAll('.icon');
 
     icons.forEach((icon) => {

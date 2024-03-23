@@ -1,0 +1,72 @@
+﻿@model Project
+<!-- Ace Editor Core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+
+<!-- To include additional features: Search box, settings menu -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-searchbox.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-settings_menu.js"></script>
+
+<!-- Include language tools for autocomplete, snippets, etc. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.js"></script>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<div id="code-editor" class="" style="height: 100%;"></div> <!-- Set a specific height or manage via CSS -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-..." crossorigin="anonymous"></script>
+<script>
+    var editor = ace.edit("code-editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/javascript");
+
+    // Configure your WebSocket or SignalR here
+    var connection = new signalR.HubConnectionBuilder()
+        .withUrl("/codeHub")
+        .build();
+
+    // Start the connection
+    async function start() {
+        try {
+            await connection.start();
+            console.log("SignalR Connected.");
+        } catch (err) {
+            console.log(err);
+            setTimeout(start, 5000);
+        }
+    };
+
+    let updatingFromServer = false;
+
+    connection.on("ReceiveCodeUpdate", function (code) {
+        // Prevent broadcasting back to server
+        updatingFromServer = true;
+        editor.session.setValue(code);
+        updatingFromServer = false;
+    });
+
+    editor.session.on('change', function(delta) {
+        if (!updatingFromServer) {
+            // Only send updates made by the user
+            connection.invoke("SendCodeUpdate", editor.session.getValue()).catch(function (err) {
+                return console.error(err.toString());
+            });
+        }
+    });
+
+    start();
+    // Set initial content if needed
+    editor.setValue("// Type your code here", -1); // -1 sets the cursor to the start
+
+    // Set some options, if desired
+    editor.setOptions({
+        enableBasicAutocompletion: true,
+        enableLiveAutocompletion: true,
+        enableSnippets: true,
+        showLineNumbers: true,
+        tabSize: 4,
+    });
+
+    // Focus the editor on load
+    editor.focus();
+</script>
+

@@ -94,7 +94,6 @@ namespace CodeConnect.Controllers
             }
         }
 
-
         public async Task<IActionResult> SendMessage(
             int roomId,
             string message,

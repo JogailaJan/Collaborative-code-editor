@@ -269,6 +269,458 @@
       "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js"
     },
     {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\base\\browser\\ui\\codicons\\codicon\\codicon.ttf",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\base\\browser\\ui\\codicons\\codicon\\codicon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.de.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.de.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.es.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.es.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.fr.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.fr.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.it.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.it.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.ja.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.ja.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.ko.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.ko.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.ru.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.ru.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.zh-cn.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.zh-cn.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.zh-tw.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\base\\common\\worker\\simpleWorker.nls.zh-tw.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\base\\worker\\workerMain.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\base\\worker\\workerMain.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\abap\\abap.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\abap\\abap.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\apex\\apex.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\apex\\apex.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\azcli\\azcli.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\azcli\\azcli.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\bat\\bat.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\bat\\bat.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\bicep\\bicep.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\bicep\\bicep.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\cameligo\\cameligo.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\cameligo\\cameligo.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\clojure\\clojure.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\clojure\\clojure.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\coffee\\coffee.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\coffee\\coffee.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\cpp\\cpp.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\cpp\\cpp.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\csharp\\csharp.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\csharp\\csharp.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\csp\\csp.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\csp\\csp.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\css\\css.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\css\\css.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\cypher\\cypher.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\cypher\\cypher.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\dart\\dart.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\dart\\dart.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\dockerfile\\dockerfile.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\dockerfile\\dockerfile.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\ecl\\ecl.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\ecl\\ecl.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\elixir\\elixir.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\elixir\\elixir.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\flow9\\flow9.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\flow9\\flow9.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\freemarker2\\freemarker2.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\freemarker2\\freemarker2.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\fsharp\\fsharp.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\fsharp\\fsharp.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\go\\go.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\go\\go.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\graphql\\graphql.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\graphql\\graphql.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\handlebars\\handlebars.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\handlebars\\handlebars.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\hcl\\hcl.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\hcl\\hcl.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\html\\html.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\html\\html.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\ini\\ini.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\ini\\ini.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\java\\java.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\java\\java.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\javascript\\javascript.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\javascript\\javascript.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\julia\\julia.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\julia\\julia.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\kotlin\\kotlin.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\kotlin\\kotlin.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\less\\less.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\less\\less.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\lexon\\lexon.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\lexon\\lexon.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\liquid\\liquid.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\liquid\\liquid.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\lua\\lua.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\lua\\lua.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\m3\\m3.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\m3\\m3.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\markdown\\markdown.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\markdown\\markdown.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\mdx\\mdx.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\mdx\\mdx.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\mips\\mips.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\mips\\mips.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\msdax\\msdax.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\msdax\\msdax.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\mysql\\mysql.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\mysql\\mysql.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\objective-c\\objective-c.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\objective-c\\objective-c.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\pascal\\pascal.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\pascal\\pascal.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\pascaligo\\pascaligo.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\pascaligo\\pascaligo.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\perl\\perl.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\perl\\perl.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\pgsql\\pgsql.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\pgsql\\pgsql.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\php\\php.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\php\\php.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\pla\\pla.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\pla\\pla.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\postiats\\postiats.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\postiats\\postiats.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\powerquery\\powerquery.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\powerquery\\powerquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\powershell\\powershell.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\powershell\\powershell.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\protobuf\\protobuf.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\protobuf\\protobuf.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\pug\\pug.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\pug\\pug.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\python\\python.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\python\\python.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\qsharp\\qsharp.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\qsharp\\qsharp.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\r\\r.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\r\\r.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\razor\\razor.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\razor\\razor.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\redis\\redis.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\redis\\redis.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\redshift\\redshift.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\redshift\\redshift.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\restructuredtext\\restructuredtext.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\restructuredtext\\restructuredtext.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\ruby\\ruby.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\ruby\\ruby.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\rust\\rust.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\rust\\rust.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\sb\\sb.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\sb\\sb.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\scala\\scala.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\scala\\scala.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\scheme\\scheme.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\scheme\\scheme.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\scss\\scss.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\scss\\scss.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\shell\\shell.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\shell\\shell.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\solidity\\solidity.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\solidity\\solidity.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\sophia\\sophia.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\sophia\\sophia.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\sparql\\sparql.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\sparql\\sparql.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\sql\\sql.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\sql\\sql.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\st\\st.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\st\\st.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\swift\\swift.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\swift\\swift.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\systemverilog\\systemverilog.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\systemverilog\\systemverilog.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\tcl\\tcl.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\tcl\\tcl.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\twig\\twig.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\twig\\twig.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\typescript\\typescript.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\typescript\\typescript.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\vb\\vb.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\vb\\vb.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\wgsl\\wgsl.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\wgsl\\wgsl.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\xml\\xml.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\xml\\xml.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\basic-languages\\yaml\\yaml.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\basic-languages\\yaml\\yaml.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\editor\\editor.main.css",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\editor\\editor.main.css"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\editor\\editor.main.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\editor\\editor.main.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.de.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.de.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.es.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.es.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.fr.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.fr.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.it.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.it.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.ja.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.ja.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.ko.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.ko.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.ru.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.ru.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.zh-cn.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.zh-cn.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.zh-tw.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\editor\\editor.main.nls.zh-tw.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\language\\css\\cssMode.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\language\\css\\cssMode.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\language\\css\\cssWorker.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\language\\css\\cssWorker.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\language\\html\\htmlMode.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\language\\html\\htmlMode.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\language\\html\\htmlWorker.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\language\\html\\htmlWorker.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\language\\json\\jsonMode.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\language\\json\\jsonMode.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\language\\json\\jsonWorker.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\language\\json\\jsonWorker.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\language\\typescript\\tsMode.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\language\\typescript\\tsMode.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\language\\typescript\\tsWorker.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\language\\typescript\\tsWorker.js"
+    },
+    {
+      "Id": "C:\\Users\\Jogaila\\Git-repositories\\JogailaJan\\Collaborative-code-editor\\CodeConnect\\wwwroot\\lib\\monaco\\min\\vs\\loader.js",
+      "PackagePath": "staticwebassets\\lib\\monaco\\min\\vs\\loader.js"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CodeConnect.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
