@@ -3,12 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeConnect", "CodeConnect.csproj", "{EAD39883-E611-4896-B409-8A312C289F23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeConnect", "CodeConnect.csproj", "{EAD39883-E611-4896-B409-8A312C289F23}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8F212845-CC3B-4931-B363-60DB549B616B}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeConnect.Tests", "..\CodeConnect.Tests\CodeConnect.Tests.csproj", "{E6ACAC35-BB19-4CC2-951A-33064F099353}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{EAD39883-E611-4896-B409-8A312C289F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAD39883-E611-4896-B409-8A312C289F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAD39883-E611-4896-B409-8A312C289F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6ACAC35-BB19-4CC2-951A-33064F099353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6ACAC35-BB19-4CC2-951A-33064F099353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6ACAC35-BB19-4CC2-951A-33064F099353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6ACAC35-BB19-4CC2-951A-33064F099353}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

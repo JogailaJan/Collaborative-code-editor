@@ -1,5 +1,7 @@
 ﻿@model IEnumerable<Project>
-
+@{
+    var chosenUserName = Context.Session.GetString("ChosenUserName");
+}
 @if (User.Identity.IsAuthenticated)
 {
     <div class="bg-dark text-white d-flex flex-grow-1">
@@ -42,6 +44,7 @@
         <div>
             <input name="password">
         </div>
+        <input type="hidden" name="userName" value="@chosenUserName">
         <footer>
             <button>Create</button>
         </footer>

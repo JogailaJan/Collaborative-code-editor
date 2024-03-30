@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CodeConnect")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c952a20a4fa53cde3f0866ab11cc092d397adf9f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94a0f040210905c9e2a556c729250f8845e7813d")]
 [assembly: System.Reflection.AssemblyProductAttribute("CodeConnect")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CodeConnect")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -15,6 +15,8 @@ namespace CodeConnect.Database
         public DbSet<Message> Messages { get; set; }
         public DbSet<ChatUser> ChatUsers { get; set; }
 
+        public DbSet<CodeFile> CodeFiles { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

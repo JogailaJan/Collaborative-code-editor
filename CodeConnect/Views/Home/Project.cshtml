@@ -10,10 +10,10 @@
 <div id="main-container" class="flex-grow-1 d-flex flex-row">
     <div id="left-bar" class="d-flex flex-row" style="min-width: 60px;">
         <div id="icon-column" class="bg-dark border-end border-right border-white d-flex flex-column h-100" style="width: 60px;">
-            <svg id="copy-icon" class="icon" data-target="copy-content" style="width: 60px;" viewBox="0 0 24.00 24.00" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+            <svg id="copy-icon" class="extendable-icon" data-target="copy-content" style="width: 60px;" viewBox="0 0 24.00 24.00" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 16.5L19.5 4.5L18.75 3.75H9L8.25 4.5L8.25 7.5L5.25 7.5L4.5 8.25V20.25L5.25 21H15L15.75 20.25V17.25H18.75L19.5 16.5ZM15.75 15.75L15.75 8.25L15 7.5L9.75 7.5V5.25L18 5.25V15.75H15.75ZM6 9L14.25 9L14.25 19.5L6 19.5L6 9Z"></path>
             </svg>
-            <svg id="cut-icon" class="icon" data-target="cut-content" style="width: 60px;" viewBox="0 0 24.00 24.00" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+            <svg id="save-icon" class="icon" data-target="save-content" style="width: 60px;" viewBox="0 0 24.00 24.00" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 5.25C4.5 4.00781 5.50781 3 6.75 3H9.75C11.1562 3 12.2578 3.98438 12.5859 5.25H15.75C17.1562 5.25 18.2578 6.24219 18.5859 7.5H19.5C20.3281 7.5 21 8.17188 21 9V21C21 21.8281 20.3281 22.5 19.5 22.5H4.5C3.67188 22.5 3 21.8281 3 21V9C3 8.17188 3.67188 7.5 4.5 7.5H5.41406C5.74219 6.24219 6.84375 5.25 8.25 5.25H11.4141C11.0469 4.17188 9.98438 3.375 9.75 3H6.75C6.58594 3 6.5 3.08594 6.5 3.25V5.25H4.5V5.25ZM4.5 19.5H19.5V9H4.5V19.5ZM8.57812 7.5H15.4219C15.2578 7.5 15.125 7.63281 15.125 7.79688C15.125 7.96094 15.2578 8.09375 15.4219 8.09375H8.57812C8.74219 8.09375 8.875 7.96094 8.875 7.79688C8.875 7.63281 8.74219 7.5 8.57812 7.5ZM15 17.25C15 16.4219 14.3281 15.75 13.5 15.75C12.6719 15.75 12 16.4219 12 17.25C12 18.0781 12.6719 18.75 13.5 18.75C14.3281 18.75 15 18.0781 15 17.25Z"></path>
             </svg>
         </div>
@@ -39,9 +39,9 @@
 
 
 <script>
-    const icons = document.querySelectorAll('.icon');
+    const extendableIcons = document.querySelectorAll('.extendable-icon');
 
-    icons.forEach((icon) => {
+    extendableIcons.forEach((icon) => {
         icon.addEventListener('click', () => {
             console.log("Clicked");
             const target = icon.getAttribute('data-target');

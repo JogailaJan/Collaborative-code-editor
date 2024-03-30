@@ -109,6 +109,35 @@ namespace CodeConnect.Migrations
                     b.ToTable("ChatUsers");
                 });
 
+            modelBuilder.Entity("CodeConnect.Models.CodeFile", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProjectId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProjectId");
+
+                    b.ToTable("CodeFiles");
+                });
+
             modelBuilder.Entity("CodeConnect.Models.Message", b =>
                 {
                     b.Property<int>("Id")
@@ -146,7 +175,14 @@ namespace CodeConnect.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Owner")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -315,6 +351,17 @@ namespace CodeConnect.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("CodeConnect.Models.CodeFile", b =>
+                {
+                    b.HasOne("CodeConnect.Models.Project", "Project")
+                        .WithMany("CodeFiles")
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Project");
+                });
+
             modelBuilder.Entity("CodeConnect.Models.Message", b =>
                 {
                     b.HasOne("CodeConnect.Models.Project", "Project")
@@ -384,6 +431,8 @@ namespace CodeConnect.Migrations
 
             modelBuilder.Entity("CodeConnect.Models.Project", b =>
                 {
+                    b.Navigation("CodeFiles");
+
                     b.Navigation("Messages");
 
                     b.Navigation("Users");

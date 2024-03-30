@@ -3,11 +3,13 @@ using CodeConnect.Database;
 using CodeConnect.Hubs;
 using CodeConnect.Infrastructure;
 using CodeConnect.Infrastructure.Repository;
+using CodeConnect.Infrastructure.Respository;
 using CodeConnect.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Diagnostics;
 using System.Security.Claims;
@@ -23,12 +25,14 @@ namespace CodeConnect.Controllers
         private IChatRepository _repo;
         private readonly ILogger<HomeController> _logger;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger, UserManager<ApplicationUser> userManager, IChatRepository repo)
+        public HomeController(AppDbContext context, ILogger<HomeController> logger, UserManager<ApplicationUser> userManager, IChatRepository repo)
         {
             _logger = logger;
             _userManager = userManager;
             _repo = repo;
+            _context = context;
         }
 
         public async Task<IActionResult> IndexAsync()
@@ -53,18 +57,24 @@ namespace CodeConnect.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateProject(string name, string password)
+        public async Task<IActionResult> CreateProject(string name, string password, string userName)
         {
-            await _repo.CreateProject(name, password, GetUserId());
+            await _repo.CreateProject(name, password, GetUserId(), userName);
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        public async Task<IActionResult> DeleteProject(int id)
+        {
+            await _repo.DeleteProject(id);
+            return RedirectToAction(nameof(Index)); // Redirect to the list of projects
+        }
         //[HttpGet]
         //public async Task<IActionResult> JoinProject(int id)
         //{
-          //  await _repo.JoinProject(id, GetUserId());
+        //  await _repo.JoinProject(id, GetUserId());
 
-            //return RedirectToAction("Project", "Home", new { id = id });
+        //return RedirectToAction("Project", "Home", new { id = id });
         //}
         [HttpPost]
         public async Task<IActionResult> JoinProject(string name, string password)
@@ -111,6 +121,21 @@ namespace CodeConnect.Controllers
                 });
             //return RedirectToAction("Project", "Home", new { id = roomId });
             return Ok();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateCodeFile(int projectId, string content)
+        {
+            try
+            {
+                // Assuming you have a method in your repository to handle the update
+                await _repo.UpdateCodeFileAsync(projectId, content);
+                return Json(new { success = true, message = "Code file updated successfully." });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
         }
     }
 }

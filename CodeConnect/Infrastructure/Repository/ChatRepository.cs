@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Azure.Identity;
 using CodeConnect.Database;
 using CodeConnect.Infrastructure.Repository;
 using CodeConnect.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace CodeConnect.Infrastructure.Respository
@@ -32,12 +34,14 @@ namespace CodeConnect.Infrastructure.Respository
         }
 
 
-        public async Task CreateProject(string name, string password, string userId)
+        public async Task CreateProject(string name, string password, string userId, string userName)
         {
             var project = new Project
             {
                 Name = name,
                 Password = password,
+                Owner = userName,
+                CreationDate = DateTime.Now
                 //Type = ChatType.Room
             };
 
@@ -50,8 +54,20 @@ namespace CodeConnect.Infrastructure.Respository
             _ctx.Projects.Add(project);
 
             await _ctx.SaveChangesAsync();
-        }
 
+            await CreateCodeFileAsync(project.Id, "Default.cs");
+        }
+        public async Task DeleteProject(int id)
+        {
+            var project = await _ctx.Projects.FindAsync(id);
+            if (project == null)
+            {
+                throw new Exception("Project not found.");
+            }
+
+            _ctx.Projects.Remove(project);
+            await _ctx.SaveChangesAsync();
+        }
         public Project GetProject(int id)
         {
             return _ctx.Projects
@@ -98,6 +114,48 @@ namespace CodeConnect.Infrastructure.Respository
             return project; // Return the project if successful.
         }
 
+        public async Task<CodeFile> CreateCodeFileAsync(int projectId, string fileName)
+        {
+            var project = await _ctx.Projects.FindAsync(projectId);
+            if (project == null)
+                throw new Exception("Project not found.");
+
+            var codeFile = new CodeFile
+            {
+                FileName = "main.txt",
+                Content = "// Initial code",
+                LastModified = DateTime.Now,
+                ProjectId = projectId
+            };
+
+            _ctx.CodeFiles.Add(codeFile);
+            await _ctx.SaveChangesAsync();
+            return codeFile;
+        }
+        public async Task UpdateCodeFileAsync(int codeFileId, string newContent)
+        {
+            var oldCodeFile = await _ctx.CodeFiles.FindAsync(codeFileId);
+            if (oldCodeFile == null)
+                throw new Exception("Code file not found.");
+            var newCodeFile = oldCodeFile;
+            newCodeFile.Content = newContent;
+            newCodeFile.LastModified = DateTime.Now;
+            _ctx.Entry(oldCodeFile).CurrentValues.SetValues(newCodeFile);
+            await _ctx.SaveChangesAsync();
+        }
+
+        public CodeFile GetCodeFile(int codeFileId)
+        {
+            return _ctx.CodeFiles
+                .FirstOrDefault(x => x.Id == codeFileId);
+        }
+
+        public IEnumerable<CodeFile> GetProjectCodeFiles(int projectId)
+        {
+            return _ctx.CodeFiles
+                .Where(x => x.ProjectId == projectId)
+                .ToList();
+        }
 
     }
 }

@@ -53,6 +53,25 @@
         }
     });
 
+    document.getElementById('save-icon').addEventListener('click', function () {
+        // Now send the updated content to the server
+        console.log("saving?");
+        updateCodeFile(editor.session.getValue());
+    });
+
+    function updateCodeFile(updatedContent) {
+        axios.post('/Home/UpdateCodeFile', {
+            projectId: @Model.Id,  // Assuming your model provides the Project ID
+            content: updatedContent
+        })
+            .then(function (response) {
+                console.log('Update successful:', response);
+            })
+            .catch(function (error) {
+                console.error('Update failed:', error);
+            });
+    }
+
     start();
     // Set initial content if needed
     editor.setValue("// Type your code here", -1); // -1 sets the cursor to the start
@@ -69,4 +88,7 @@
     // Focus the editor on load
     editor.focus();
 </script>
+
+
+
 
