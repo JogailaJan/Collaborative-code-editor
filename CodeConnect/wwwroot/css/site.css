@@ -72,10 +72,10 @@ body {
 
 .modal-body {
     position: relative;
-    min-width: 300px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
-    background-color: #5c4773;
+    background-color: #212529;
     padding: 1rem;
 }
 

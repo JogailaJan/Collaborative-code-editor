@@ -4,15 +4,17 @@
 @foreach (var project in Model)
 {
     <tr>
-        <td>
+        <td style="padding-left: 40px;">
             <a class="room-buttons" asp-controller="Home" asp-action="Project" asp-route-id="@project.Id">
                 @project.Name
             </a>
         </td>
         <td>@project.Owner</td>
         <td>@project.CreationDate</td>
-        <td>
-            <button class="btn btn-info btn-sm">Edit</button>
+        <td class="d-flex flex-row justify-content-between">
+            <form>
+                <button class="btn btn-info btn-sm">Edit</button>
+            </form>
             <form method="post" asp-controller="Home" asp-action="DeleteProject" asp-route-id="@project.Id" onsubmit="return confirm('Are you sure you want to delete this project?');">
                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
             </form>
